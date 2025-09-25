@@ -7,6 +7,15 @@ import { AuthProvider, useAuth } from "@/contexts/AuthContext";
 import { Layout } from "@/components/layout/Layout";
 import { LoginPage } from "@/pages/LoginPage";
 import { Dashboard } from "@/pages/Dashboard";
+import { TendersPage } from "@/pages/TendersPage";
+import { CreateTenderPage } from "@/pages/CreateTenderPage";
+import { MyBidsPage } from "@/pages/MyBidsPage";
+import { EvaluationPage } from "@/pages/EvaluationPage";
+import { AwardsPage } from "@/pages/AwardsPage";
+import { VerificationPage } from "@/pages/VerificationPage";
+import { AuditTrailPage } from "@/pages/AuditTrailPage";
+import { NotificationsPage } from "@/pages/NotificationsPage";
+import { SettingsPage } from "@/pages/SettingsPage";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -45,15 +54,12 @@ function AppRoutes() {
             </ProtectedRoute>
           } 
         />
-        {/* Placeholder routes - will be implemented */}
+        {/* Full functional routes */}
         <Route 
           path="/tenders" 
           element={
             <ProtectedRoute>
-              <div className="text-center py-12">
-                <h2 className="text-2xl font-semibold mb-2">Tenders</h2>
-                <p className="text-muted-foreground">Coming soon...</p>
-              </div>
+              <TendersPage />
             </ProtectedRoute>
           } 
         />
@@ -61,10 +67,7 @@ function AppRoutes() {
           path="/create-tender" 
           element={
             <ProtectedRoute>
-              <div className="text-center py-12">
-                <h2 className="text-2xl font-semibold mb-2">Create Tender</h2>
-                <p className="text-muted-foreground">Coming soon...</p>
-              </div>
+              <CreateTenderPage />
             </ProtectedRoute>
           } 
         />
@@ -72,10 +75,7 @@ function AppRoutes() {
           path="/my-bids" 
           element={
             <ProtectedRoute>
-              <div className="text-center py-12">
-                <h2 className="text-2xl font-semibold mb-2">My Bids</h2>
-                <p className="text-muted-foreground">Coming soon...</p>
-              </div>
+              <MyBidsPage />
             </ProtectedRoute>
           } 
         />
@@ -83,10 +83,7 @@ function AppRoutes() {
           path="/evaluation" 
           element={
             <ProtectedRoute>
-              <div className="text-center py-12">
-                <h2 className="text-2xl font-semibold mb-2">Evaluation</h2>
-                <p className="text-muted-foreground">Coming soon...</p>
-              </div>
+              <EvaluationPage />
             </ProtectedRoute>
           } 
         />
@@ -94,10 +91,7 @@ function AppRoutes() {
           path="/awards" 
           element={
             <ProtectedRoute>
-              <div className="text-center py-12">
-                <h2 className="text-2xl font-semibold mb-2">Awards</h2>
-                <p className="text-muted-foreground">Coming soon...</p>
-              </div>
+              <AwardsPage />
             </ProtectedRoute>
           } 
         />
@@ -105,10 +99,7 @@ function AppRoutes() {
           path="/verification" 
           element={
             <ProtectedRoute>
-              <div className="text-center py-12">
-                <h2 className="text-2xl font-semibold mb-2">Blockchain Verification</h2>
-                <p className="text-muted-foreground">Coming soon...</p>
-              </div>
+              <VerificationPage />
             </ProtectedRoute>
           } 
         />
@@ -116,10 +107,7 @@ function AppRoutes() {
           path="/audit" 
           element={
             <ProtectedRoute>
-              <div className="text-center py-12">
-                <h2 className="text-2xl font-semibold mb-2">Audit Trail</h2>
-                <p className="text-muted-foreground">Coming soon...</p>
-              </div>
+              <AuditTrailPage />
             </ProtectedRoute>
           } 
         />
@@ -127,10 +115,7 @@ function AppRoutes() {
           path="/search" 
           element={
             <ProtectedRoute>
-              <div className="text-center py-12">
-                <h2 className="text-2xl font-semibold mb-2">Search</h2>
-                <p className="text-muted-foreground">Coming soon...</p>
-              </div>
+              <TendersPage />
             </ProtectedRoute>
           } 
         />
@@ -138,10 +123,15 @@ function AppRoutes() {
           path="/settings" 
           element={
             <ProtectedRoute>
-              <div className="text-center py-12">
-                <h2 className="text-2xl font-semibold mb-2">Settings</h2>
-                <p className="text-muted-foreground">Coming soon...</p>
-              </div>
+              <SettingsPage />
+            </ProtectedRoute>
+          } 
+        />
+        <Route 
+          path="/notifications" 
+          element={
+            <ProtectedRoute>
+              <NotificationsPage />
             </ProtectedRoute>
           } 
         />

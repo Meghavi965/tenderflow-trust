@@ -9,7 +9,8 @@ import {
   History,
   Trophy,
   Search,
-  Settings
+  Settings,
+  Bell
 } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { useAuth } from '@/contexts/AuthContext';
@@ -74,6 +75,12 @@ const navItems: NavItem[] = [
     title: 'Search',
     href: '/search',
     icon: Search,
+    roles: ['admin', 'bidder', 'evaluator']
+  },
+  {
+    title: 'Notifications',
+    href: '/notifications',
+    icon: Bell,
     roles: ['admin', 'bidder', 'evaluator']
   },
   {
